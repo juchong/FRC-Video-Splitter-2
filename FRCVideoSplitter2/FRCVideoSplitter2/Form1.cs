@@ -300,7 +300,7 @@ namespace FRCVideoSplitter2
 
             List<FRCApi.MatchResult> rawMatches = new List<FRCApi.MatchResult>();
 
-            rawMatches = api.getMatchResults<FRCApi.MatchResult>(Properties.Settings.Default.year, Properties.Settings.Default.eventCode);
+            rawMatches = api.getMatchResults<FRCApi.MatchResult>(Properties.Settings.Default.year, Properties.Settings.Default.eventCode, false);
 
             foreach (FRCApi.MatchResult frcMatch in rawMatches)
             {

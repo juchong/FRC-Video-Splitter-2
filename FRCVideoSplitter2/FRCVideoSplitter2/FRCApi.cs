@@ -76,7 +76,7 @@ namespace FRCVideoSplitter2
             {
                 if (!System.IO.File.Exists(HelperDataStructures.convertUriToFileName(uri, ".bin")))
                 {
-                    //if there isn't a cached file, we need to force an API update to create one.
+                   //if there isn't a cached file, we need to force an API update to create one.
                     useIfModifiedSince = false;
                 }
                 string api_response = sendAndGetRawResponse(uri, useIfModifiedSince);

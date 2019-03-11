@@ -75,5 +75,15 @@ namespace FRCVideoSplitter2
             Properties.Settings.Default.Reset();
             FRCApi.deleteRequestTimes();
         }
+
+        private void ClearYouTubeCreds_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearYouTubeCreds_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://accounts.google.com/b/0/IssuedAuthSubTokens?hl=en");
+        }
     }
 }

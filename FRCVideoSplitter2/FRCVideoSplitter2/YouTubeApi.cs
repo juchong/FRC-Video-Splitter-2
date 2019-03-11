@@ -28,7 +28,7 @@ namespace FRCVideoSplitter2
             {
                 _assembly = Assembly.GetExecutingAssembly();
                 var stream = _assembly.GetManifestResourceStream("FRCVideoSplitter2.client_secrets.json");
-                using (stream) // new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
+                using (stream) //new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
                 {
                     credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
                         GoogleClientSecrets.Load(stream).Secrets,

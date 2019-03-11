@@ -43,6 +43,7 @@
             this.tbaAuthKey = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.youtubePrivate = new System.Windows.Forms.CheckBox();
+            this.ClearYouTubeCreds = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RefreshFRCDataButton
@@ -187,11 +188,23 @@
             this.youtubePrivate.Text = "Make Youtube Uploads Private";
             this.youtubePrivate.UseVisualStyleBackColor = true;
             // 
+            // ClearYouTubeCreds
+            // 
+            this.ClearYouTubeCreds.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.ClearYouTubeCreds.Location = new System.Drawing.Point(11, 385);
+            this.ClearYouTubeCreds.Name = "ClearYouTubeCreds";
+            this.ClearYouTubeCreds.Size = new System.Drawing.Size(165, 23);
+            this.ClearYouTubeCreds.TabIndex = 15;
+            this.ClearYouTubeCreds.Text = "Clear YouTube Credentials";
+            this.ClearYouTubeCreds.UseVisualStyleBackColor = true;
+            this.ClearYouTubeCreds.Click += new System.EventHandler(this.ClearYouTubeCreds_Click_1);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 496);
+            this.Controls.Add(this.ClearYouTubeCreds);
             this.Controls.Add(this.youtubePrivate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbaAuthKey);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.TextBox tbaAuthKey;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox youtubePrivate;
+        private System.Windows.Forms.Button ClearYouTubeCreds;
     }
 }
