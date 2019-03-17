@@ -42,6 +42,7 @@ namespace FRCVideoSplitter2
             this.yearBox.Text = Properties.Settings.Default.year.ToString();
             this.matchLengthBox.Text = Properties.Settings.Default.matchLength;
             this.endOfVideoPaddingBox.Text = Properties.Settings.Default.endOfVideoPadTime;
+            this.matchResultLengthBox.Text = Properties.Settings.Default.matchResultLengthBox;
             this.frcApiToken.Text = Properties.Settings.Default.frcApiToken;
             this.tbaAuthKey.Text = Properties.Settings.Default.tbaApiKey;
             this.useScoreDisplayedTimeCheckbox.Checked = Properties.Settings.Default.useScoreDisplayedTime;
@@ -58,6 +59,7 @@ namespace FRCVideoSplitter2
             }
             Properties.Settings.Default.matchLength = matchLengthBox.Text;
             Properties.Settings.Default.endOfVideoPadTime = endOfVideoPaddingBox.Text;
+            Properties.Settings.Default.matchResultLengthBox = matchResultLengthBox.Text;
             Properties.Settings.Default.Save();
             Properties.Settings.Default.useScoreDisplayedTime = this.useScoreDisplayedTimeCheckbox.Checked;
             Properties.Settings.Default.uploadYoutubeAsPrivate = this.youtubePrivate.Checked;
@@ -84,6 +86,16 @@ namespace FRCVideoSplitter2
         private void ClearYouTubeCreds_Click_1(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://accounts.google.com/b/0/IssuedAuthSubTokens?hl=en");
+        }
+
+        private void endOfVideoPaddingBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MatchResultLengthBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

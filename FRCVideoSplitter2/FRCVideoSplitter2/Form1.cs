@@ -602,7 +602,7 @@ namespace FRCVideoSplitter2
 
                 progress.SetText("Splitting video " + (completed + 1) + " of " + matchesList.Where(i => i.Include == true).ToList().Count);
                 string startTime = match.TimeStamp.ToString("HH:mm:ss.fff");
-                string videoName = match.FIRSTDescription.ToString() + " - " + yearBox.Text + " " + eventsComboBox.Text + Path.GetExtension(sourceFile);
+                string videoName = match.TbaDescription + " - " + yearBox.Text + " " + eventsComboBox.Text + Path.GetExtension(sourceFile);
                 string destinationFile = Path.Combine(matchVideoDestinationPathTextBox.Text, videoName);
                 string matchLengthString = null;
                 string watermarkFileLocation = null;
@@ -612,7 +612,7 @@ namespace FRCVideoSplitter2
                 TimeSpan matchLength = (((DateTime)match.PostResultTime - match.ActualStartTime).Add(padTime)); //pad time covers the post-result, normal case
 
                 if (Properties.Settings.Default.useScoreDisplayedTime && match.PostResultTime.HasValue)
-                {
+                {   
                     TimeSpan timeBeforePost = match.PostResultTime.Value - match.ActualStartTime;
                     if (timeBeforePost > new TimeSpan(0, 2, 45)) //if it's more than 15 second to post (2m30s for match plus a little more), cut that extra out.
                     {
@@ -635,7 +635,7 @@ namespace FRCVideoSplitter2
 
                 if (doSplitMatchVideos) //post-result separate from match video
                 {
-                    TimeSpan postResultShowTime = new TimeSpan(0, 0, 15);
+                    TimeSpan postResultShowTime = TimeSpan.Parse(Properties.Settings.Default.matchResultLengthBox);
                     string postResultFileName = "postresultportion.mp4";
 
                     TimeSpan timeBetweenStartAndPost = (((DateTime)match.PostResultTime - match.ActualStartTime));
