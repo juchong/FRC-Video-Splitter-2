@@ -172,7 +172,7 @@ namespace FRCVideoSplitter2
 
             //after the form is closed, update your objects from the settings file
             api.loadRequestTimes();
-            updateObjects();
+            //updateObjects();
         }
         /// <summary>
         /// Pulls from settings and updates the objects in this class
@@ -189,7 +189,7 @@ namespace FRCVideoSplitter2
             this.eventsComboBox.DataSource = eventNames;
             if (!string.IsNullOrEmpty(Properties.Settings.Default.eventName))
             {
-                string abc = Properties.Settings.Default.eventName;
+                //string abc = Properties.Settings.Default.eventName;
                 this.eventsComboBox.Text = Properties.Settings.Default.eventName;
             }
             if (!string.IsNullOrEmpty(Properties.Settings.Default.eventCode))

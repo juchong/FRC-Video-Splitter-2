@@ -23,23 +23,8 @@ namespace FRCVideoSplitter2
             MessageBox.Show("Data successfully refreshed.");
         }
 
-        /// <summary>
-        /// Save the year if they change it
-        /// </summary>
-        private void yearBox_TextChanged(object sender, EventArgs e)
-        {
-            //if they've entered 4 digits
-            int year;
-            if (this.yearBox.Text.Length == 4 && int.TryParse(this.yearBox.Text, out year))
-            {
-                Properties.Settings.Default.year = year;
-                Properties.Settings.Default.Save();
-            }
-        }
-
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            this.yearBox.Text = Properties.Settings.Default.year.ToString();
             this.matchLengthBox.Text = Properties.Settings.Default.matchLength;
             this.endOfVideoPaddingBox.Text = Properties.Settings.Default.endOfVideoPadTime;
             this.matchResultLengthBox.Text = Properties.Settings.Default.matchResultLengthBox;

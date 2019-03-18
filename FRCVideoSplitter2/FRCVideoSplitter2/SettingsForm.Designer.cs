@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.RefreshFRCDataButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.yearBox = new System.Windows.Forms.TextBox();
             this.overrideHelperLabel = new System.Windows.Forms.Label();
             this.matchLengthBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
@@ -58,30 +56,12 @@
             this.RefreshFRCDataButton.UseVisualStyleBackColor = true;
             this.RefreshFRCDataButton.Click += new System.EventHandler(this.RefreshFRCDataButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Year";
-            // 
-            // yearBox
-            // 
-            this.yearBox.Location = new System.Drawing.Point(12, 11);
-            this.yearBox.Name = "yearBox";
-            this.yearBox.Size = new System.Drawing.Size(50, 20);
-            this.yearBox.TabIndex = 3;
-            this.yearBox.Text = "2017";
-            this.yearBox.TextChanged += new System.EventHandler(this.yearBox_TextChanged);
-            // 
             // overrideHelperLabel
             // 
             this.overrideHelperLabel.AutoSize = true;
             this.overrideHelperLabel.Enabled = false;
             this.overrideHelperLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.overrideHelperLabel.Location = new System.Drawing.Point(69, 41);
+            this.overrideHelperLabel.Location = new System.Drawing.Point(69, 19);
             this.overrideHelperLabel.Name = "overrideHelperLabel";
             this.overrideHelperLabel.Size = new System.Drawing.Size(166, 13);
             this.overrideHelperLabel.TabIndex = 6;
@@ -89,7 +69,7 @@
             // 
             // matchLengthBox
             // 
-            this.matchLengthBox.Location = new System.Drawing.Point(12, 37);
+            this.matchLengthBox.Location = new System.Drawing.Point(12, 15);
             this.matchLengthBox.Name = "matchLengthBox";
             this.matchLengthBox.Size = new System.Drawing.Size(50, 20);
             this.matchLengthBox.TabIndex = 5;
@@ -108,7 +88,7 @@
             // useScoreDisplayedTimeCheckbox
             // 
             this.useScoreDisplayedTimeCheckbox.AutoSize = true;
-            this.useScoreDisplayedTimeCheckbox.Location = new System.Drawing.Point(252, 41);
+            this.useScoreDisplayedTimeCheckbox.Location = new System.Drawing.Point(266, 17);
             this.useScoreDisplayedTimeCheckbox.Name = "useScoreDisplayedTimeCheckbox";
             this.useScoreDisplayedTimeCheckbox.Size = new System.Drawing.Size(166, 17);
             this.useScoreDisplayedTimeCheckbox.TabIndex = 8;
@@ -118,7 +98,7 @@
             // 
             // endOfVideoPaddingBox
             // 
-            this.endOfVideoPaddingBox.Location = new System.Drawing.Point(12, 63);
+            this.endOfVideoPaddingBox.Location = new System.Drawing.Point(12, 41);
             this.endOfVideoPaddingBox.Name = "endOfVideoPaddingBox";
             this.endOfVideoPaddingBox.Size = new System.Drawing.Size(50, 20);
             this.endOfVideoPaddingBox.TabIndex = 5;
@@ -129,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 66);
+            this.label2.Location = new System.Drawing.Point(69, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 13);
             this.label2.TabIndex = 6;
@@ -147,7 +127,7 @@
             // 
             // frcApiToken
             // 
-            this.frcApiToken.Location = new System.Drawing.Point(12, 122);
+            this.frcApiToken.Location = new System.Drawing.Point(12, 93);
             this.frcApiToken.Name = "frcApiToken";
             this.frcApiToken.Size = new System.Drawing.Size(245, 20);
             this.frcApiToken.TabIndex = 10;
@@ -157,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 125);
+            this.label3.Location = new System.Drawing.Point(263, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 13);
             this.label3.TabIndex = 11;
@@ -165,7 +145,7 @@
             // 
             // tbaAuthKey
             // 
-            this.tbaAuthKey.Location = new System.Drawing.Point(12, 153);
+            this.tbaAuthKey.Location = new System.Drawing.Point(12, 119);
             this.tbaAuthKey.Name = "tbaAuthKey";
             this.tbaAuthKey.Size = new System.Drawing.Size(245, 20);
             this.tbaAuthKey.TabIndex = 12;
@@ -175,7 +155,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(263, 156);
+            this.label4.Location = new System.Drawing.Point(263, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 13;
@@ -184,7 +164,7 @@
             // youtubePrivate
             // 
             this.youtubePrivate.AutoSize = true;
-            this.youtubePrivate.Location = new System.Drawing.Point(12, 188);
+            this.youtubePrivate.Location = new System.Drawing.Point(12, 145);
             this.youtubePrivate.Name = "youtubePrivate";
             this.youtubePrivate.Size = new System.Drawing.Size(174, 17);
             this.youtubePrivate.TabIndex = 14;
@@ -206,7 +186,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 92);
+            this.label5.Location = new System.Drawing.Point(69, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 13);
             this.label5.TabIndex = 17;
@@ -214,7 +194,7 @@
             // 
             // matchResultLengthBox
             // 
-            this.matchResultLengthBox.Location = new System.Drawing.Point(12, 89);
+            this.matchResultLengthBox.Location = new System.Drawing.Point(12, 67);
             this.matchResultLengthBox.Name = "matchResultLengthBox";
             this.matchResultLengthBox.Size = new System.Drawing.Size(50, 20);
             this.matchResultLengthBox.TabIndex = 16;
@@ -241,8 +221,6 @@
             this.Controls.Add(this.endOfVideoPaddingBox);
             this.Controls.Add(this.overrideHelperLabel);
             this.Controls.Add(this.matchLengthBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.yearBox);
             this.Controls.Add(this.RefreshFRCDataButton);
             this.Name = "SettingsForm";
             this.Text = "Settings";
@@ -255,8 +233,6 @@
         #endregion
 
         private System.Windows.Forms.Button RefreshFRCDataButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox yearBox;
         private System.Windows.Forms.Label overrideHelperLabel;
         private System.Windows.Forms.TextBox matchLengthBox;
         private System.Windows.Forms.Button saveButton;
